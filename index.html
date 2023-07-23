@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmployeeInfo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Questionnaire</h1>
+    <form id="questionForm">
+      <label for="name">1. What is your name?</label>
+      <input type="text" id="name" required>
+
+      <label for="passport">2. Do you have a passport?</label>
+      <select id="passport" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <div id="passportNumberInput" style="display: none;">
+        <label for="passportNumber">Please enter your passport number:</label>
+        <input type="text" id="passportNumber">
+      </div>
+
+      <div id="visaInput" style="display: none;">
+        <label for="visa">3. Do you have a valid visa?</label>
+        <select id="visa" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="result" style="display: none;"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
